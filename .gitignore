@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & Linting
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+.ruff_cache/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# LaTeX build artifacts (preserva o PDF final compilado main.pdf)
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
+*.toc
+
+# OS & Cloud Sync
+desktop.ini
+Thumbs.db
+.DS_Store
+.idea/
+.vscode/
+
+# -------------------------------------------------------------
+# DADOS OPERACIONAIS CONFIDENCIAIS E SAÍDAS EMPÍRICAS (PROPRIETÁRIOS)
+# Proibido envio de séries históricas de medição da planta
+# -------------------------------------------------------------
+*.csv
+*.xlsx
+*.xls
+data/*.csv
+data/raw/
+análise/outputs/
+resultados_simulacao/*.csv

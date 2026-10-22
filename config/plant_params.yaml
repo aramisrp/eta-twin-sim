@@ -1,0 +1,53 @@
+# Physical, Geometric, and Operational Parameters of the Water Treatment Plant (Pilot WTP)
+
+plant:
+  name: "Compact Water Treatment Plant (Pilot WTP)"
+  nominal_flow_lps: 25.0
+  operating_flow_range_lps: [14.0, 28.5]
+  intake_source: "Estuarine Surface Water Intake"
+  intake_adductor_diameter_mm: 400.0
+  intake_distance_m: 150.0
+
+units:
+  floc_decanters:
+    type: "Cylindrical Inclined Parallel Plate Settlers (Lamella Clarifiers)"
+    num_parallel_units: 2
+    total_volume_m3: 70.0
+    unit_volume_m3: 35.0
+    hydraulic_retention_time_nominal_min: 23.3
+    plate_area_equivalent_m2: 120.0
+  filters:
+    type: "Dual-Media Rapid Granular Filters (Upflow/Downflow)"
+    num_units: 2
+    media_layers: ["Graded Sand", "Anthracite Coal"]
+    bed_height_m: 1.2
+    total_volume_m3: 30.0
+  disinfection_and_storage:
+    type: "In-situ Sodium Hypochlorite Disinfection and Contact Reservoir"
+    reservoir_semi_buried_volume_m3: 600.0
+    reservoir_elevated_volume_m3: 200.0
+    total_effective_contact_volume_m3: 800.0
+
+actuators:
+  dosing_pumps:
+    type: "Industrial Peristaltic Dosing Pumps"
+    coagulant_max_mg_l: 80.0
+    coagulant_min_mg_l: 0.0
+    chlorine_max_mg_l: 10.0
+    chlorine_min_mg_l: 0.0
+    max_flow_rate_ml_min: 2000.0
+    min_flow_rate_ml_min: 0.1
+  intake_vfd:
+    type: "Variable Frequency Drive (VFD)"
+    nominal_power_kw: 15.0
+    nominal_frequency_hz: 60.0
+    min_frequency_hz: 30.0
+
+portaria_888:
+  turbidity_target_ntu: 0.5
+  turbidity_standard_limit_ntu: 5.0
+  free_chlorine_min_mg_l: 0.2
+  free_chlorine_max_mg_l: 2.0
+  free_chlorine_target_mg_l: 1.5
+  ph_min: 6.0
+  ph_max: 9.0

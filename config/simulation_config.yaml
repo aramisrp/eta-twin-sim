@@ -1,0 +1,26 @@
+# Configuração Geral do Motor de Simulação do Gêmeo Digital (eta_twin_sim)
+
+simulation:
+  time_step_hours: 2.0         # Passo de amostragem padrão (2h correspondente à série ouro_wide.csv)
+  fine_time_step_hours: 0.0833 # Passo refinado para eventos de choque (5 minutos)
+  integration_method: "RK45"   # Runge-Kutta de 4ª/5ª ordem para transientes contínuos
+  random_seed: 42
+
+seasons:
+  chuvoso_months: [1, 2, 3, 4, 5, 6]
+  seca_months: [7, 8, 9, 10, 11, 12]
+  transition_rain_to_dry: [6, 7]
+  transition_dry_to_rain: [12, 1]
+
+estuary_boundary_defaults:
+  tide_amplitude_m: 2.5
+  tide_period_m2_hours: 12.42
+  tide_period_s2_hours: 12.00
+  shear_turbidity_gain: 12.5
+  rainfall_washoff_gain: 0.85
+  rainfall_recession_tau_hours: 18.0
+
+calibration:
+  training_split_ratio: 0.70
+  optimization_tolerance: 1e-6
+  max_iterations: 1000
