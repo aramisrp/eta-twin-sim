@@ -23,3 +23,9 @@ dev = [
     "pytest-cov>=4.0",
     "ruff>=0.1.0",
 ]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["models*", "control*", "data*", "evaluation*", "visualization*"]
+exclude = ["tests*", "config*"]
+
