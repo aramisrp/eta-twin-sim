@@ -68,11 +68,9 @@ def test_opex_savings():
     assert np.isclose(savings["relative_saving_pct"], (45.0 - 35.0) / 45.0 * 100.0)
     assert savings["total_saved_kg"] > 0.0
 
-def test_scenario_runner():
-    artigo_dir = Path(__file__).parents[3]
-    data_path = artigo_dir / "02_Series_Historicas_e_Estatistica" / "Dados" / "3_Ouro" / "ouro_wide.csv"
-    loader = ETADatasetLoader(data_path)
-    df = loader.load_clean_data().iloc[:100] # Subamostra para teste rápido
+def test_scenario_runner(default_data_path):
+    loader = ETADatasetLoader(default_data_path)
+    df = loader.load_clean_data().iloc[:100]  # Subamostra para teste rápido
     
     runner = ScenarioRunner()
     results = runner.run_scenarios(df)

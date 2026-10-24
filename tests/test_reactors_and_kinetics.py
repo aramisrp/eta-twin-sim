@@ -55,10 +55,8 @@ def test_reactors_mass_balance_and_stability():
     )
     assert 0.0 < res_state["sai_cloro"] <= 2.0
 
-def test_full_state_space_and_calibrator():
-    artigo_dir = Path(__file__).parents[3]
-    data_path = artigo_dir / "02_Series_Historicas_e_Estatistica" / "Dados" / "3_Ouro" / "ouro_wide.csv"
-    loader = ETADatasetLoader(data_path)
+def test_full_state_space_and_calibrator(default_data_path):
+    loader = ETADatasetLoader(default_data_path)
     df = loader.load_clean_data()
     
     calibrator = GrayBoxCalibrator()

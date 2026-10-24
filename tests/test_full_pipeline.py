@@ -3,11 +3,12 @@ import pandas as pd
 from run_simulation import execute_simulation_study
 
 
-def test_full_pipeline_execution(tmp_path):
+def test_full_pipeline_execution(tmp_path, default_data_path):
     output_dir = tmp_path / "output_test"
     output_dir.mkdir(parents=True, exist_ok=True)
     
     results = execute_simulation_study(
+        data_path=default_data_path,
         output_dir=output_dir,
         sample_size=150, # Modo rápido para teste
         generate_plots=True,

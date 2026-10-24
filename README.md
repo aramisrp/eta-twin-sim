@@ -1,5 +1,9 @@
 # Water Treatment Plant Digital Twin Simulator (`eta_twin_sim`)
 
+[![Python CI](https://github.com/aramisrp/eta-twin-sim/actions/workflows/ci.yml/badge.svg)](https://github.com/aramisrp/eta-twin-sim/actions/workflows/ci.yml)
+[![Python Version](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
+[![License: Open Source](https://img.shields.io/badge/License-Academic%2FOpen%20Source-green.svg)](README.md)
+
 A computational Python framework for physicochemical **Gray-Box modeling** and **Digital Twin** closed-loop simulation (incorporating stoichiometric *Feedforward* + Discrete *Feedback PI with Clamping Anti-Windup*) for conventional and compact water treatment plants (WTP).
 
 ---
